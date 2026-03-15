@@ -7,6 +7,8 @@
 
 #define long long long
 
+#define castDynamicList(DYNPTR, PTRTYPE) ((T) DYNPTR->__internal)
+
 typedef unsigned char byte;
 
 typedef enum Result {
