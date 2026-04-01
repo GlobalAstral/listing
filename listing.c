@@ -2,7 +2,7 @@
 
 #define long long long
 #define BASE_CAP 8
-#define INTEGRITY_FLAG 0xCAFEBABEDEADBEEFFEEBDAEDEBABEFAC
+#define INTEGRITY_FLAG 0xCAFEBABEDEADBEEF
 #define ceildiv(a, b) (((a) + (b) - 1) / (b))
 
 DynamicArray newDynamicArray(size_t element_size) {
@@ -16,7 +16,7 @@ DynamicArray newDynamicArray(size_t element_size) {
 }
 
 bool checkDynamicArray(DynamicArray* dyn) {
-  return dyn->__integrity == INTEGRITY_FLAG;
+  return dyn != NULL && dyn->__integrity == INTEGRITY_FLAG;
 }
 
 Result reserveDynamicArray(DynamicArray* dyn, size_t size) {
